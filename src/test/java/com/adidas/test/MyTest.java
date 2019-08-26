@@ -17,7 +17,7 @@ public class MyTest extends BaseTest{
 		adidas.lupa();
 		adidas.productoBusqueda();
 		adidas.linkProducto();
-		//adidas.textFiltro();
+		adidas.textFiltro();
 		adidas.sexoFiltro();
 		adidas.textFiltro();
 		
