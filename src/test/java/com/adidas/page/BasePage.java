@@ -13,34 +13,34 @@ public class BasePage {
     //Constructor
     public BasePage (WebDriver driver){
         this.driver = driver;
-        wait = new WebDriverWait(driver,30);
+        wait = new WebDriverWait(driver,60);
     }
  
-    //Wait Wrapper Method
+    //Metodo de espera del elemento visible
     public void waitVisibility(By elementBy) {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
     }
  
-    //Click Method
+    //Metodo de Click
     public void click (By elementBy) {
         waitVisibility(elementBy);
         driver.findElement(elementBy).click();
     }
  
-    //Write Text
+    //Metodo escritura
     public void writeText (By elementBy, String text) {
         waitVisibility(elementBy);
         driver.findElement(elementBy).clear();
         driver.findElement(elementBy).sendKeys(text);
     }
  
-    //Read Text
+    //Meto de lectura
     public String readText (By elementBy) {
         waitVisibility(elementBy);
         return driver.findElement(elementBy).getText();
     }
  
-    //Assert
+    //validar igualdad
     public void assertEquals (By elementBy, String expectedText) {
         waitVisibility(elementBy);
         Assert.assertEquals(readText(elementBy), expectedText);

@@ -10,16 +10,17 @@ public class BaseTest {
  
     @Before
     public void setup () {
-        //Create a Chrome driver. All test classes use this.
+        //Llamado de Chrome driver
     	System.setProperty("webdriver.chrome.driver", "C:\\test_automation\\drivers\\chromedriver.exe");
         driver = new ChromeDriver();
  
-        //Maximize Window
+        //Ventana maximizada
         driver.manage().window().maximize();
     }
  
     @After
     public void teardown () {
-       // driver.quit();
+    	//Cierre del navegador
+        //driver.quit();
     }
 }

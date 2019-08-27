@@ -3,7 +3,6 @@ package com.adidas.test;
 import org.junit.Test;
 import com.adidas.page.AdidasPage;
 
-
 public class MyTest extends BaseTest{
 	
 	@Test
@@ -17,22 +16,8 @@ public class MyTest extends BaseTest{
 		adidas.lupa();
 		adidas.productoBusqueda();
 		adidas.linkProducto();
-		adidas.textFiltro();
 		adidas.sexoFiltro();
 		adidas.textFiltro();
 		
-		
-	/*Base b = new Base();
-		WebDriver driver = b.getDriver();
-		Compra compra1 = PageFactory.initElements(driver, Compra.class);
-		String url = "https://www.adidas.co/";
-		driver.get(url);
-		driver.manage().window().maximize();
-		
-		
-		compra1.Producto("tenis");
-		
-		
-		driver.quit();*/
 	}
 }
