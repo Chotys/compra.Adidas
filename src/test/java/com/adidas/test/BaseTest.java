@@ -12,7 +12,7 @@ public class BaseTest {
     @Before
     public void setup () {
         //Llamado de Chrome driver
-    	System.setProperty("webdriver.chrome.driver", "C:\\test_automation\\drivers\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver.exe");
         driver = new ChromeDriver();
         //JavascriptExecutor js = (JavascriptExecutor)driver;
  
@@ -23,6 +23,6 @@ public class BaseTest {
     @After
     public void teardown () {
     	//Cierre del navegador
-        driver.quit();
+    	driver.quit();
     }
 }

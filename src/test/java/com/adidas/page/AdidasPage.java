@@ -28,17 +28,17 @@ public class AdidasPage extends BasePage{
     }
 
     //link del producto
-    public void productoBusqueda() {
+    public void productoBusqueda() throws Exception {
     	writeText(busqueda, producto);
     }
     
     //boton buscar en campo busqueda
-    public void lupa() {
+    public void lupa()  throws Exception {
     	click(lupa);
     }
     
     //Seleccion de boton de la segunda opción
-    public void linkProducto() {
+    public void linkProducto()  throws Exception {
 		click(linkBusqueda);
     }
     

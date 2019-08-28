@@ -24,23 +24,23 @@ public class ProductoPage extends BasePage{
     By carritoVer = By.xpath(verCarrito);    
     
     //Seleccionar producto
-    public void productoSeleccionado() {
+    public void productoSeleccionado() throws Exception {
     	click(productoTenis);
     }
     
     //seleccionamos la talla
-    public void tallaTenis() {
+    public void tallaTenis()  throws Exception {
     	click(botonTalla);
     	click(botonTenis);
     }
     
     //boton añadir al carrito
-    public void anadirCarrito() {
+    public void anadirCarrito()  throws Exception {
     	click(carritoBoton);
     }
     
     //Ver carrito
-    public void carrito() {
+    public void carrito()  throws Exception {
     	click(carritoVer);
     }
 

@@ -17,31 +17,35 @@ public class BasePage {
     }
  
     //Metodo de espera del elemento visible
-    public void waitVisibility(By elementBy) {
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
+    public void waitVisibility(By elementBy) throws Exception{
+    	try {
+    		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
+    	} catch (Exception e){
+    		System.out.println("WebDriver no encontro el "+elementBy+" elemento visible");
+    	}
     }
  
     //Metodo de Click
-    public void click (By elementBy) {
+    public void click (By elementBy) throws Exception {
         waitVisibility(elementBy);
         driver.findElement(elementBy).click();
     }
  
     //Metodo escritura
-    public void writeText (By elementBy, String text) {
+    public void writeText (By elementBy, String text)  throws Exception {
         waitVisibility(elementBy);
         driver.findElement(elementBy).clear();
         driver.findElement(elementBy).sendKeys(text);
     }
  
     //Meto de lectura
-    public String readText (By elementBy) {
+    public String readText (By elementBy)  throws Exception {
         waitVisibility(elementBy);
         return driver.findElement(elementBy).getText();
     }
  
     //validar igualdad
-    public void assertEquals (By elementBy, String expectedText) {
+    public void assertEquals (By elementBy, String expectedText)  throws Exception {
         waitVisibility(elementBy);
         Assert.assertEquals(readText(elementBy), expectedText);
  

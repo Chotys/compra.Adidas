@@ -7,7 +7,7 @@ import com.adidas.page.ProductoPage;
 public class MyTest extends BaseTest{
 	
 	@Test
-	public void test01() {
+	public void test01() throws Exception {
 		//*************PAGE INSTANTIATIONS*************
 		AdidasPage adidas = new AdidasPage(driver);
 		ProductoPage producto = new ProductoPage(driver);
